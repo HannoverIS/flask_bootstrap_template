@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  app:
+    container_name: app.srv
+    build:
+      context: ../
+      dockerfile: deploy/app/Dockerfile
+    env_file:
+      - app/app.env
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+    
+  postgres:
+    container_name: app.db
+    build:
+      context: ../
+      dockerfile: deploy/db/Dockerfile
+    env_file:
+      - db/db.env
+    ports:
+      - "5432:5432"
