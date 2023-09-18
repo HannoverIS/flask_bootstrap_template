@@ -28,7 +28,13 @@ This is a beginner guide to deploy your first Flask App with Bootstrap.
 <pre>
 <code>.
 ├── <b>app</b>
-│   ├── app.py : All API's app
+│   ├── <b>static</b>
+│   │   ├── <b>css</b>
+│   │   │   └── stile.css
+│   │   ├── <b>img</b> : Apps Images
+│   ├── <b>templates</b>
+│   │	└── index.html
+│   ├── app.py : Python Flask APP
 │   └── requirements.txt
 ├── <b>deploy</b>
 │   ├── <b>app</b>
